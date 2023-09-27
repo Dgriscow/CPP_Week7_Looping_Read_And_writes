@@ -1,0 +1,2 @@
+Total for student 0 Is: 115
+Total for student 1 Is: 220
