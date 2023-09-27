@@ -3,6 +3,33 @@
 #include <fstream>
 using namespace std;
 
+void StudentScoreCalculator::calculateTotal()
+{
+
+	for (int st = 0; st < 2; st++) {
+		//reset total to 0 for each student 
+		total = 0;
+		//s = score
+		for (int s = 0; s < 3; s++) {
+
+			total += studentData[st][s];
+
+
+		}
+
+
+		cout << "Total for student " << st << " Is: " << total << endl;
+
+		outPutFile << "Total for student " << st << " Is: " << total << endl;
+
+
+
+
+
+	}
+
+}
+
 void StudentScoreCalculator::calculateAverage()
 {
 	int numStudents, // Number of students
@@ -59,14 +86,14 @@ void StudentScoreCalculator::readStudentData()
 
 	string ansFileName = "Answers.txt";
 
-	int studentScores[2][3]; 
+	
 			//st = student 
 	for (int st = 0; st < 2; st++) {
 
 		//s = score
 		for (int s = 0; s < 3; s++) {
 
-			inputFile >> studentScores[st][s];
+			inputFile >> studentData[st][s];
 
 
 		}
